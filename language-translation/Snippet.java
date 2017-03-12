@@ -30,7 +30,7 @@ public class Snippet extends SuperGluev2 {
 		
 		//fromlanguage and tolanguage arg need to be upper case
 		TranslationResult translationResult = service.translate(myBean.get("text").getAsString(),
-				Lan-guage.valueOf(myBean.get("fromLanguage").getAsString().toUpperCase()), Language.valueOf(myBean.get("toLanguage").getAsString().toUpperCase())).execute();
+				Language.valueOf(myBean.get("fromLanguage").getAsString().toUpperCase()), Language.valueOf(myBean.get("toLanguage").getAsString().toUpperCase())).execute();
 		
         JsonObject json = parser.parse(translationResult.toString()).getAsJsonObject();
 		
